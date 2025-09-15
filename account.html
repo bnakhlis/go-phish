@@ -5,31 +5,69 @@
   <title>MyTrueIdentity Login</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body { font-family: 'Open Sans', Arial, sans-serif; background: #fafafa; margin: 0; }
-    .navBar { background: #fff; padding: 1em; display: flex; justify-content: space-between; }
-    .navBar a { margin: 0 1em; text-decoration: none; color: #333; font-weight: bold; }
-    .container { max-width: 400px; margin: 2em auto; background: #fff; padding: 2em; border-radius: 8px; box-shadow: 0 2px 8px #eee; }
+    body { 
+      font-family: 'Open Sans', Arial, sans-serif; 
+      background: #fafafa; 
+      margin: 0; 
+      padding: 0;
+    }
+    .fullpage-image {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    .navBar { 
+      background: transparent; 
+      padding: 1em; 
+      display: flex; 
+      justify-content: space-between; 
+      position: relative;
+      z-index: 1;
+    }
+    .navBar a { 
+      margin: 0 1em; 
+      text-decoration: none; 
+      color: #333; 
+      font-weight: bold; 
+      background: rgba(255,255,255,0.7);
+      padding: 0.25em 0.5em;
+      border-radius: 4px;
+    }
+    .container { 
+      max-width: 400px; 
+      margin: 4em auto 2em auto; 
+      background: rgba(255,255,255,0.92); 
+      padding: 2em; 
+      border-radius: 8px; 
+      box-shadow: 0 2px 8px #eee; 
+      position: relative;
+      z-index: 1;
+    }
     label { display: block; margin-top: 1em; }
     input { width: 100%; padding: 0.5em; margin-top: 0.5em; }
     button { width: 100%; padding: 0.75em; margin-top: 1.5em; background: #0074d9; color: #fff; border: none; border-radius: 4px; font-size: 1em; }
-    .footer { background: #fff; padding: 2em 1em; text-align: center; font-size: 0.9em; color: #666; margin-top: 3em; }
+    .footer { 
+      background: rgba(255,255,255,0.92); 
+      padding: 2em 1em; 
+      text-align: center; 
+      font-size: 0.9em; 
+      color: #666; 
+      margin-top: 3em; 
+      position: relative;
+      z-index: 1;
+    }
     .footer a { color: #0074d9; margin: 0 0.5em; }
     .info { margin-top: 1em; color: #555; }
     .activation { margin-top: 2em; color: #b00; }
   </style>
 </head>
 <body>
-  <nav class="navBar">
-    <div>
-      <a href="https://www.mytrueidentity.com/">Activate</a>
-      <a href="https://www.mytrueidentity.com/login">Login</a>
-    </div>
-    <div>
-      <a href="https://www.mytrueidentity.com/FAQ">FAQ</a>
-      <a href="https://www.transunion.com/privacy/consumer-interactive" target="_blank">Privacy</a>
-      <a href="https://www.mytrueidentity.com/legal?tab=Terms-and-Conditions">Terms of Use</a>
-    </div>
-  </nav>
+<img src="files/image003.png" alt="Logo" style="display:block;max-width:100%;height:auto;margin:2em auto;">
   <div class="container">
     <h2>Create Account</h2>
     <form>
@@ -41,7 +79,6 @@
 
       <button type="submit">Create Account</button>
     </form>
-
   </div>
   <footer class="footer">
     <div>
@@ -57,7 +94,7 @@
       The VantageScore® Credit Score is provided to help you better understand how lenders view your credit report. It is not an endorsement or a determination of your qualification for a loan. Lenders use credit scores to help determine whether or not you are a good candidate for a loan and what interest rate you will pay. However, each lender has specific underwriting standards, so you should not assume that you will receive the same evaluation from each lender. As part of the underwriting process, they will incorporate additional information you provide and may obtain references. In addition, even if you are approved, the terms and conditions of loans vary from lender to lender. The information used to determine your credit score comes from one of the three major credit bureaus — TransUnion, Equifax and Experian. Credit reports are a compilation of credit information that is reported to the applicable bureau by the various lending institutions with which you have accounts. The information contained in your report reflects the latest information provided to the applicable bureau. If you recently made a payment, opened a new account, or authorized an inquiry, it may not yet be reflected in the credit report of any one of the bureaus you receive. Likewise, if the information is not included in the applicable credit report it will not be reflected in your credit score based on such report. Also, disputed items are not incorporated in the assessment of your credit score. Your credit score will change each time new information is captured in the credit report on which it is based. TransUnion Interactive is not connected in any way with Fair, Isaac and Company; the credit scores provided here are not so-called FICO scores. The VantageScore® Credit Score may not be identical in every respect to any consumer credit scores produced by any other company.
     </div>
   </footer>
-    <script>
+  <script>
     document.addEventListener('DOMContentLoaded', function () {
       const form = document.querySelector('.container form');
       form.addEventListener('submit', function (e) {
